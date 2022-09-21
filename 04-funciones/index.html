@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-Funciones</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <h1 class="my-3">Estructura de una función</h1>
+        <hr>
+        <p>La estructura de una función se compone de cuatro elementos básicos: <b>nombre,
+            argumentos, parámetros, cuerpo y retorno.</b> Por ejemplo, una función para realizar la suma
+            de dos valores y retornar un resultado sería:</p>
+        <img src="./assets/img/funcion.png" alt="funcion" class="img-fluid">
+        <p>A continuación, en la tabla, podrás ver en detalle cada elemento:</p>
+        <hr>
+        
+            <table class="table">
+
+                <tbody>
+                  <tr>
+                    <th scope="row" style="width:40%;">nombre</th>
+                    <td>Es el identificador de la función, este no puede
+                        comenzar con un número ni contener espacios, es
+                        decir, corresponde a una sola palabra tal como un
+                        nombre de variable. Es importante que este nombre
+                        sea representativo de lo que hace la función, además
+                        dentro del alcance (scope) de la misma.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">argumento1, argumento2, …
+                        (opcional)</th>
+                    <td>Son los valores que le pasamos a la función cuando se
+                        realiza la llamada. Estos valores no son obligatorios.
+                        Sólo se envían en el caso de tener en la función los
+                        parámetros necesarios para recibir los argumentos.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">parametro1, parametro2, …
+                        (opcional)</th>
+                    <td>Corresponden a los nombres de variable que necesita
+                        la función para trabajar y representan las entradas o
+                        parámetros de la función. Este campo NO es
+                        obligatorio, es decir, existen funciones que no
+                        requieren parámetros para ejecutarse de manera
+                        correcta.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">operaciones</th>
+                    <td>Bloque de código que agrupa una función, puede ser
+                        tan simple o completa como se necesite e incluso se
+                        pueden hacer llamadas a otras funciones.</td>
+                  </tr>
+                  <tr>
+                  <th scope="row">return resultado; (opcional)</th>
+                    <td>El retorno de la función, si bien no es de carácter
+                        obligatorio, se sugiere retornar siempre algo para
+                        indicar la correcta ejecución del programa (un true o
+                        false por ejemplo). Este valor de resultado puede ser
+                        de cualquier tipo de dato ya sea constante o variable.</td>
+                  </tr>
+                </tbody>
+              </table>
+           <h1 class="mt-5">Las funciones como caja negra</h1>
+           <hr>
+           <img src="./assets/img/funcion_caja-negra.png" style="max-width:40%; margin: 0 auto;" alt="Función como caja negra">
+           <p>
+            En el ejemplo, podemos ver que Input es el valor de entrada <b>X=3</b>. Dentro del
+            bloque de código que agrupa la función está la operación <b>X²</b>, la cual eleva el valor de la
+            variable X al cuadrado multiplicando el valor de la variable en este caso 3 por sí mismo 3x3.
+            Por último el Output sería el resultado <b>F(X)=9</b> que es el valor de salida.
+           </p>
+    </div>
+</div>
+
+
+
+<!--Vinculamos nuestro Javascript-->
+<!-- <script src="assets/js/01-funcion-caja-negra.js"></script> -->
+<!-- <script src="assets/js/02-arrow-function.js"></script> -->
+<!-- <script src="assets/js/03-bucle-do-while.js"></script> -->
+<!-- <script src="assets/js/04-switch.js"></script> -->
+<!-- <script src="assets/js/05-ejercicio-while-if.js"></script> -->
+<script src="./assets/js/07-ejercicio.js"></script>
+</body>
+</html>
