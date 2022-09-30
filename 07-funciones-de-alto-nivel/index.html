@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Programación Funcional</h1>
+        <h5>Un poco de teoría</h5>
+        <h6><b>CompetenciaComprender:</b>Que es una función de orden superior.</h6>
+        <hr>
+        <p>En el desarrollo de Software existen dos paradigmas principales: <b>Imperativo y Declarativo.</b>
+            Todos los lenguajes (o a lo menos, los lenguajes comunes que utilizarás todos los días),
+            basan su sintaxis y semántica en uno o más de estos paradigmas, como observamos en la
+            siguiente imagen:</p>
+
+        <div class="contetImg">
+            <img class="img-fluid" src="./assets/img/csm_paradigmas-de-programacion_a1a74f0153.png" alt="">
+        </div>
+            
+
+        <p>Javascript es un <b>lenguaje imperativo con aspectos funcionales</b>, que es un subparadigma del
+            paradigma declarativo. Antes de adentrarnos en la teoría de la programación funcional,
+            veremos un par de características de las funciones en JavaScript que son necesarias para
+            entender a cabalidad la teoría.</p>
+
+        <h4 class="mt-5">Ejercicio Retornar funciones y Recibir funciones por parámetro</h4>
+        <hr>
+        <p>Uso de funciónes por parametro y retorno</p>
+  
+            <form class="formulario">
+                <div class="mb-3">
+                    <label for="num1" class="form-label">Ingrese el primer número:</label>
+                    <input type="number" class="form-control" id="num1">
+                </div>
+                <div class="mb-3">
+                    <label for="num2" class="form-label"> Ingrese el segundo número:</label>
+                    <input type="number" class="form-control" id="num2">
+                </div>
+
+                <div class="mb-3">
+                    <label for="operador" class="form-label">Seleccione una operación</label>
+                    <select id="operador" class="form-select">
+                        <option value="sumar">Sumar</option>
+                        <option value="restar">Restar</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="calcular">Calcular</button>
+            </form>
+        
+            <div class="alert alert-warning my-5 maxWidth" role="alert">
+                El resultado de <span id="resultado"></span>
+            </div>
+  
+    </div>
+
+ 
+    
+    
+<!--Vinculamos Javascript-->
+<script src="./assets/js/02.metodos-de-busqueda-y-transformacion.js"></script>
+</body>
+</html>

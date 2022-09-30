@@ -1,0 +1,29 @@
+.imgCenter{
+    margin: 0 auto;
+}
+
+.contetImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contetImg img{
+    border: 1px solid grey;
+    border-radius: 1rem;
+    margin:1rem 0 1.5rem 0;
+}
+
+.formulario{
+    max-width: 60%;
+    margin: 0 auto;
+    background-color: #e1e1e1;
+    padding: 1.5rem 2rem;
+    /* color: #fff; */
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 33%);
+}
+.maxWidth{
+    max-width: 60%;
+    margin: 0 auto;
+}

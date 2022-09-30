@@ -70,3 +70,91 @@
 
 
  */
+
+// console.clear()
+// function saludo( n ){
+//    // console.log(n)
+//          return ( n ) => n+'????'
+// }
+       
+// const saludoUno = saludo()
+// console.log( 'Salida-->', saludoUno('Hola'))
+
+
+// function mayorQue(n) {
+//    return (m) => m > n
+// }
+
+// console.log('mayorQue',mayorQue(3))
+// let mayorQueDiez = mayorQue( 10 )
+
+// console.log( mayorQueDiez(12) )  //  true
+// console.log( mayorQueDiez(8) )  //  false
+console.log('====================FUNCIONES SIN ORDEN SUPERIOR====================')
+/*
+   Supongamos que tenemos una matriz y queremos crear una nueva matriz que
+   contenga el doble del valor de cada una de las primeras. 
+   Veamos cómo resolver el problema con y sin funciones de orden superior.
+*/
+const arr1 = [1,2,3]; 
+const arr2 = [ ];
+for(let i = 0; i <arr1.length; i ++){ 
+  arr2.push(arr1 [i] * 2); 
+}
+
+console.log(arr2);// imprimir [2,4,6] 
+
+console.log('====================SOLUCION CON FUNCION CON ORDEN SUPERIOR====================')
+const arr3 = [1,2,3];
+const arr4 = arr3.map( function ( item ) { 
+  return item * 2; 
+})
+console.log(arr4)
+
+console.log('====================LO MISMO CON FUNCION DE FLECHA====================')
+const salida = arr3.map( item => item*2 )
+console.log(salida)
+
+
+console.log('====================FUNCIONES DE ORDEN SUPERIOR====================')
+/**
+ * 
+   FUNCIONES DE ORDEN SUPERIOR
+   
+   Las funciones de orden superior son funciones que operan en otras 
+   funciones y pueden tomarlas como argumentos o devolverlas. 
+   En pocas palabras, Una función de orden superior es una función que toma una función
+   como parámetro o devuelve una función como salida.
+
+   CONTEXTO
+
+   Suponemos que JavaScript no es nativomapMétodo Podemos construirlo nosotros mismos
+   para crear nuestras propias funciones de orden superior.
+
+   Supongamos que tenemos una matriz de cadenas y queremos convertir
+   esta matriz en una matriz de enteros, donde cada elemento representa
+   la longitud de la cadena en la matriz original.
+
+*/
+
+const strArray = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
+
+function mapForEach( arr, fn) {
+  console.log(fn)
+  const newArray = [];
+  for( let i = 0; i < arr.length; i++ )  {
+    newArray.push(
+      fn(arr[i])
+    );
+  }
+  return newArray;
+
+}
+const lenArray = mapForEach( strArray, function( item ) {
+  return item.length;
+});
+
+// prints [ 10, 6, 3, 4, 1 ]
+console.log( lenArray );
+
+       
