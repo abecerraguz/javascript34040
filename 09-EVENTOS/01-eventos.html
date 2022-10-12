@@ -49,6 +49,17 @@
 
 		<div class="container my-5">
 
+			<h3 class="display-5 font-weight-bold mb-3">Disparar un evento</h3>
+			<div class="row mb-5">
+				<div class="col-md-12">
+
+					<button type="button" id="opcionUno" class="btn btn-primary">Opción 1</button>
+					<button type="button" id="opcionDos" class="btn btn-secondary">Opcion 2</button>
+					<button type="button" id="opcionTres" class="btn btn-success" onclick="respuestaClickOpcionTres()">Opción 3</button>
+			
+				</div>
+			</div>
+
 			<h3 class="display-5 font-weight-bold mb-3">Ejercicio de Formualario</h3>
 			<hr>
 
@@ -63,14 +74,14 @@
 
 				<div class="form-group">
 					<label for="apellidos">Apellidos</label>
-					<input type="text" class="form-control" id="apellidos">
+					<input type="text" class="form-control" id="apellido">
 					<div class="alert alert-danger my-2" role="alert" id="error_apellidos">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="edad">Edad</label>
-					<input type="number" class="form-control" id="edad">
+					<input type="text" class="form-control" id="edad">
 					<div class="alert alert-danger my-2" role="alert" id="error_edad">
 					</div>
 				</div>
@@ -82,16 +93,16 @@
 			<div class="alert alert-secondary my-5" role="alert" id="alerta">
 				<h3>Información del Usuario</h3>
 				<hr>
-				<p id="p_nombre" class="font-weight-bold">
-					Nombre: <span class="font-weight-light"></span>
+				<p class="font-weight-bold">
+					Nombre: <span class="font-weight-light" id="infoNombre"></span>
 				</p>
 
-				<p id="p_apellidos" class="font-weight-bold">
-					Apellidos: <span class="font-weight-light"></span>
+				<p class="font-weight-bold">
+					Apellido: <span class="font-weight-light" id="infoApellido"></span>
 				</p>
 
-				<p id="p_edad" class="font-weight-bold">
-					Edad: <span class="font-weight-light"></span>
+				<p class="font-weight-bold">
+					Edad: <span class="font-weight-light" id="infoEdad"></span>
 				</p>
 			</div>
 			
@@ -99,6 +110,32 @@
 
 
 
-		<script src="assets/js/03-ejercicio-DOM-Eventos-funciones.js"></script> 
+		<script src="./assets/js/01-ejercicio-DOM-Eventos-funciones.js"></script> 
+		
+
+		<script>
+			function respuestaClickOpcionTres(e){
+				console.log('Se ejecuta la respuesta de opcion tres')
+			}
+		</script>
+		<!-- INFO MODAL -->
+		<!-- Modal -->
+		<div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				...
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Understood</button>
+				</div>
+			</div>
+			</div>
+		</div>
 </body>
 </html>

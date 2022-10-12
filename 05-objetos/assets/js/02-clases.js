@@ -1,16 +1,19 @@
 // CLASES ECMA 6
 // CLASES Y METODOS
 class Rectangulo { 
+
     constructor(x, y) {
         this.x = x;
         this.y = y; 
     }
+
     calcularArea(){
         return this.x * this.y;
     }
     calcularPerimetro(){
         return (this.x + this.y) * 2; 
     }
+    
 }
 
 let rectangulo1 = new Rectangulo(3,4);
