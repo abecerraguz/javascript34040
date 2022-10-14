@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<title>Local Storage</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+	
+	<div class="container">
+
+		<h1 class="display-5 font-weight-bold color-secondary my-5">Ejercicio-LocalStorage</h1>
+
+		<h3>Añade peliculas</h3>
+
+		<hr>
+
+		<form action="" id="formPeliculas">
+
+			<div class="form-row align-items-center">
+				<div class="col-sm-3 my-1">
+					<label class="sr-only" for="addPelicula">Ingresa el nombre de la pelicula</label>
+					<input type="text" class="form-control" id="addPelicula">
+				</div>
+
+				<div class="col-auto my-1">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+				</div>
+			</div>
+
+		</form>
+		
+		<h4 class="my-3">Mostrar peliculas</h4>
+		
+  			<ul id="listaPeliculas">
+  				
+  			</ul>
+
+  		<h3 class="my-5">Remueve peliculas</h3>
+
+		<hr>
+
+  		<form action="" id="formBorrarPeliculas" class="mt-5">
+
+			<div class="form-row align-items-center">
+				<div class="col-sm-3 my-1">
+					<label class="sr-only" for="removePelicula">Borrar-Pelicula</label>
+					<input type="text" class="form-control" id="removePelicula">
+				</div>
+
+				<div class="col-auto my-1">
+					<button type="submit" class="btn btn-primary">Borrar</button>
+				</div>
+			</div>
+
+		</form>
+		
+	</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./assets/js/01-ejercicio-completo-localstorage.js"></script> 
+
+</body>
+</html>

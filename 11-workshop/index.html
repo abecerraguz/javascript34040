@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop Javascript 34040</title>
+	
+	<!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body class="bg-light">
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand" href="#">Navbar</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto navegacion">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item dropdown">
+				  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+					Dropdown
+				  </a>
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Action</a>
+					<a class="dropdown-item" href="#">Another action</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Something else here</a>
+				  </div>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link disabled">Disabled</a>
+				</li>
+			  </ul>
+
+              
+               <ul class="ms-md-auto">
+                    <li class="submenu">
+                            <img width="30" src="./assets/img/carrito-de-compras.png" id="img-carrito">
+                            <div id="carrito">
+                                    
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Borrar</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="listaCarrito">
+
+                                    </tbody>
+                                  </table>
+                                  <div class="d-grid gap-2">
+                                    <a href="#" class="btn btn-secondary" id="vaciar-carrito">Vaciar Carrito</a>
+                                  </div>
+                    
+                            </div>
+                    </li>
+                </ul>
+           
+	
+			</div>
+		</div>
+	  </nav>
+
+
+		<div id="lista-cursos"  class="container my-5" >
+            <div class="row" id="insertDOMcontent">
+                
+                <!-- <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                </div> -->
+            </div>	
+		</div>
+
+
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
+
+
+
