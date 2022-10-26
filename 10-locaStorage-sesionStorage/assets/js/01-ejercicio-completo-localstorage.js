@@ -67,7 +67,11 @@ if( typeof window === 'object' ){
 	
 	
 		});
-
+		/* 
+			Para guardar objetos en el local Storage, importante para guardar datos estos
+			deben ser convertidos a un string si no el objeto quedaria como
+			Indefinido. Para esto se utiliza la propiedad JSON.stringfy().
+		
 		// OBJETOS CON LOCAL STORAGE
 		let usuario = {
 			nombre: 'Alejandro Becerra',
@@ -75,14 +79,10 @@ if( typeof window === 'object' ){
 			web: 'http:www.abecerrafrontend.cl'
 		}
 
-		/* 
-			Para guardar objetos en el local Storage, importante para guardar datos estos
-			deben ser convertidos a un string si no el objeto quedaria como
-			Indefinido. Para esto se utiliza la propiedad JSON.stringfy().
-		*/
+		
 
 		localStorage.setItem('usuario',  usuario );
-
+		*/
 	})
 }
 
