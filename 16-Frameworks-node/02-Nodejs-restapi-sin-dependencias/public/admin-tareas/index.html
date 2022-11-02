@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de tareas</title>
+    
+    <!-- CDN BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <!-- CSS DEL PROYECTO -->
+    <link rel="stylesheet" href="http://localhost:3000/public/admin-tareas/assets/css/main.css">
+  </head>
+<body>
+    <div class="container">
+
+        <div class="containerButton">
+            <button onclick="addTareaModal()" type="button" class="buttonAgregarTarea"><i class="fa-solid fa-plus me-1"></i>Nueva tarea</button>
+        </div>
+       
+        <h3>Administrador de tarea</h3>
+        <div class="contentTable">
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" class="whiteSpace">Título de la tarea</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="printTareas">
+                </tbody>
+              </table>
+        </div>
+       
+    </div>
+
+<!-- JAVASCRIPT -->
+
+<!-- CDN de JQUERY para Manejar la MODAL -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- CDN Bootstrap 5.2.0 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- KIT de FontAwesome Personal se recomienda cambiar por un Kit personal -->
+<script src="https://kit.fontawesome.com/f6f28e61f7.js" crossorigin="anonymous"></script>
+<!-- Javacript que hace la conversación con el Backend del server -->
+<script src="http://localhost:3000/public/admin-tareas/assets/js/main.js"></script>
+
+
+
+<!-- Modal Editar Tarea-->
+<div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="titleModal">Editar tarea</h5>
+          <button type="button" class="btn-close color-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Título</label>
+                <input type="text" class="form-control" name="name" id="titulo">
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-warning" onclick="actualizarTarea()">Guardar</button>
+              </div>
+              
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal Agregar tarea-->
+<div class="modal fade" id="modalAddTarea" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="titleModal">Nueva tarea</h5>
+          <button type="button" class="btn-close color-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Título</label>
+                <input type="text" class="form-control" name="name" id="tituloAdd">
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea class="form-control" name="descripcion" id="descripcionAdd" rows="3"></textarea>
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-warning" onclick="addTarea()">Guardar</button>
+              </div>
+              
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal Mensaje-->
+<div class="modal fade" id="modalMensaje" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="titleModal">Estas seguro!!</h5>
+        <button type="button" class="btn-close color-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-danger" onclick="`eliminarTarea()`"><i class="fa-solid fa-trash-can me-1"></i>Borrar</button>
+            </div>  
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
