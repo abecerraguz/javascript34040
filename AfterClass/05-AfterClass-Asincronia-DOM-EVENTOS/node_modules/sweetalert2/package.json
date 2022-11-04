@@ -1,0 +1,80 @@
+{
+  "name": "sweetalert2",
+  "version": "11.6.5",
+  "repository": "sweetalert2/sweetalert2",
+  "homepage": "https://sweetalert2.github.io/",
+  "description": "A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes, supported fork of sweetalert",
+  "main": "dist/sweetalert2.all.js",
+  "browser": "dist/sweetalert2.all.js",
+  "module": "dist/sweetalert2.all.js",
+  "types": "sweetalert2.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-terser": "^0.1.0",
+    "@sweetalert2/eslint-config": "^1.0.11",
+    "@sweetalert2/execute": "^1.0.0",
+    "@sweetalert2/stylelint-config": "^2.0.6",
+    "cypress": "^10.10.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-no-unsanitized": "^4.0.1",
+    "jquery": "^3.6.1",
+    "postcss-scss": "^4.0.5",
+    "prettier": "^2.7.1",
+    "replace-in-file": "^6.3.5",
+    "rollup": "^3.2.2",
+    "sass": "^1.55.0",
+    "stylelint": "^14.14.0",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.8"
+  },
+  "files": [
+    "dist",
+    "src",
+    "sweetalert2.d.ts"
+  ],
+  "author": "Limon Monte <limon.monte@gmail.com> (https://limonte.github.io)",
+  "contributors": [
+    "Matthew Francis Brunetti <zenflow87@gmail.com> (https://github.com/zenflow)",
+    "Morgan Touverey-Quilling <mtouverey@alembic-dev.com> (https://github.com/toverux)",
+    "Giuseppe Verni (https://github.com/gverni)",
+    "Sam Turrell <sam@samturrell.co.uk> (https://github.com/samturrell)",
+    "Joseph Schultz (https://github.com/acupofjose)",
+    "Johan Fagerberg (https://github.com/birjolaxew)"
+  ],
+  "keywords": [
+    "sweetalert",
+    "sweetalert2",
+    "alert",
+    "modal",
+    "popup",
+    "prompt",
+    "confirm",
+    "toast",
+    "accessible"
+  ],
+  "scripts": {
+    "start": "vite sandbox",
+    "lint": "stylelint src/**/*.scss && eslint src cypress *.js *.ts && prettier --check src/**/*.js cypress/**/*.js *.js",
+    "build": "node tools/build.mjs",
+    "test": "cypress run --headless",
+    "check-types": "tsc --noEmit -p jsconfig.json",
+    "cypress:open": "cypress open"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/limonte"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "es5"
+  },
+  "bugs": "https://github.com/sweetalert2/sweetalert2/issues",
+  "license": "MIT"
+}
