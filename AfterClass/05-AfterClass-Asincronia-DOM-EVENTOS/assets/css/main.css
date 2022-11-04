@@ -1,0 +1,57 @@
+body{
+    background: #26064e;
+}
+
+.navbar-brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario{
+    padding: 2.5rem 1rem;
+    background: #ffc107;
+    border-radius: 1rem;
+
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: orange!important;
+    border-color: orange!important;
+}
+
+.list-group-item {
+    background-color: #ffffff4f!important;
+}
+
+.contentSpinnerLoading{
+    background-color: rgb(20 20 20 / 42%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg);}
+  }
+  
+  .spinner {        
+      border: 8px solid rgb(255 255 255 / 25%);
+      border-left-color: purple;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1.2s linear infinite;
+  }
+
+  .container{
+    max-width: 40%;
+  }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar el Clima</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/sweetalert2/dist/sweetalert2.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+<div class="contentSpinnerLoading">
+    <div class="spinner"></div>
+</div>
+<nav class="navbar bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/img/weather.png" alt="Logo" width="60"  class="d-inline-block align-text-top mr-3">
+            <h1 class="h5 mx-3 text-white">Busca el tiempo</h1>
+        </a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="alert alert-warning my-5 text-center" role="alert" id="resultado">
+        Agrega tu ciudad y país, el resultado se mostrará aquí
+    </div>
+
+    <form id="formulario" class="mt-10" action="#" method="POST">
+        <div class="mb-3">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Escribe tu Ciudad" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <select class="form-select" id="pais">
+                <option disabled selected value="">-- Seleccione --</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="CR">Costa Rica</option>
+                <option value="ES">España</option>
+                <option value="US">Estados Unidos</option>
+                <option value="MX">México</option>
+                <option value="PE">Perú</option>
+            </select>
+        </div>
+        <div class="d-grid gap-2">
+            <input type="submit" class="btn btn-danger" value="Obtener Clima"/>
+        </div>
+     
+    </form>
+</div>
+
+<!-- IMPORTANMOS NUESTRO JAVASCRIPT -->
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="./node_modules/sweetalert2/dist/sweetalert2.js"></script>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+</body>
+</html>
